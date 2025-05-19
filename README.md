@@ -1,5 +1,6 @@
 ALU Regex Data Extraction
 This repository contains a JavaScript implementation of a RegexExtractor class designed to extract various data patterns from text using regular expressions.
+
 Project Overview
 This project was created as part of the "Regex Onboarding Hackathon" assignment. The task was to implement regular expressions to extract various types of data from text, simulating the scenario of processing large volumes of string data from an API.
 Features
@@ -9,7 +10,8 @@ Email addresses, URLs, Phone numbers, HTML tags, as well as Currency amounts.
 Implementation
 The project consists of two main files:
 1. regex-data-extraction.js: Contains the RegexExtractor class with methods for each data type extraction
-2.test.js: Provides test cases and demonstrates the functionality of the extractor
+2. test.js: Provides test cases and demonstrates the functionality of the extractor
+   
 
 Regular Expressions Used
 
