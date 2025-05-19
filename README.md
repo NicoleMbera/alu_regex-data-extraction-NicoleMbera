@@ -15,21 +15,21 @@ The project consists of two main files:
 
 Regular Expressions Used
 
-Email: /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g
-URLs: /https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%.\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%\+.~#?&//=]*)/g
-Phone Numbers: /(?:\(\d{3}\)\s?|\d{3}[-.])\d{3}[-.]?\d{4}/g
-HTML Tags: /<([a-z][a-z0-9])\b[^>]>/gi
-Currency Amounts: /\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?/g
+1. Email: /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g
+2. URLs: /https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%.\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%\+.~#?&//=]*)/g
+3. Phone Numbers: /(?:\(\d{3}\)\s?|\d{3}[-.])\d{3}[-.]?\d{4}/g
+4. HTML Tags: /<([a-z][a-z0-9])\b[^>]>/gi
+5. Currency Amounts: /\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?/g
 
 Usage
 To use the RegexExtractor in your project:
 javascript// Import the RegexExtractor class
 import RegexExtractor from './regex-data-extraction.js';
 
-// Create an instance of the extractor
+# Create an instance of the extractor
 const extractor = new RegexExtractor();
 
-// Sample text with various data patterns
+# Sample text with various data patterns
 const text = `
   Contact us at support@example.com or visit https://example.com.
   Call our customer service at (123) 456-7890.
@@ -37,11 +37,11 @@ const text = `
   <div class="content">This is some content</div>
 `;
 
-// Extract specific data type
+# Extract specific data type
 const emails = extractor.extractEmails(text);
 console.log(emails);  // ['support@example.com']
 
-// Or extract all supported data types at once
+# Or extract all supported data types at once
 const allData = extractor.extractAllData(text);
 console.log(allData);
 
