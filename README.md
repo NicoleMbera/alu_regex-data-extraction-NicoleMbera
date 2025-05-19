@@ -22,14 +22,14 @@ The project consists of two main files:
 5. Currency Amounts: /\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?/g
 
 # Usage
-To use the RegexExtractor in your project:
+1. To use the RegexExtractor in your project:
 javascript// Import the RegexExtractor class
 import RegexExtractor from './regex-data-extraction.js';
 
-# Create an instance of the extractor
+2. Create an instance of the extractor
 const extractor = new RegexExtractor();
 
-# Sample text with various data patterns
+3.  Sample text with various data patterns
 const text = `
   Contact us at support@example.com or visit https://example.com.
   Call our customer service at (123) 456-7890.
@@ -37,11 +37,11 @@ const text = `
   <div class="content">This is some content</div>
 `;
 
-# Extract specific data type
+4. Extract specific data type
 const emails = extractor.extractEmails(text);
 console.log(emails);  // ['support@example.com']
 
-# Or extract all supported data types at once
+5. Or extract all supported data types at once
 const allData = extractor.extractAllData(text);
 console.log(allData);
 
